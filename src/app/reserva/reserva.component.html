@@ -1,0 +1,102 @@
+
+<div class="bg-teal-700 text-white p-4 flex justify-between items-center">
+    <div>
+        <div class="text-xl font-bold">SISTEMA DE ACTUALIZACION RESERVAS</div>
+        <div class="text-sm">Usuario: CGC$USER</div>
+        <div class="text-sm">Fecha: CGC$SYSDATE</div>
+    </div>
+    <div class="flex items-center space-x-2">
+        <input type="text" class="border border-gray-400 p-1" size="2">
+        <input type="text" class="border border-gray-400 p-1" size="2">
+        <input type="text" class="border border-gray-400 p-1" size="2">
+        <input type="text" class="border border-gray-400 p-1" size="2">
+        <input type="text" class="border border-gray-400 p-1" size="2">
+        <input type="text" class="border border-gray-400 p-1" size="2">
+        <input type="text" class="border border-gray-400 p-1" size="2">
+        <input type="text" class="border border-gray-400 p-1" size="2">
+        <i class="fas fa-search text-white"></i>
+        <i class="fas fa-print text-white"></i>
+        <input type="text" class="border border-gray-400 p-1" size="2">
+        <input type="text" class="border border-gray-400 p-1" size="2">
+    </div>
+    <div class="text-sm">
+        Conectado a: DI_CONEXION
+    </div>
+</div>
+
+
+
+<div class="bg-gray-300 p-2 mt-4 font-bold">Modificación Reserva de Coberturas</div>
+<div class="overflow-x-auto">
+    <table class="w-full border-collapse mb-4">
+        <tr>
+            <td class="border p-2">Canal:</td>
+            <td class="border p-2"><input type="text" class="border border-gray-400 p-1" value="SISI_CA"></td>
+            <td class="border p-2">Ramo:</td>
+            <td class="border p-2"><input type="text" class="border border-gray-400 p-1" value="SISI_SICS_CARP_CI"></td>
+            <td class="border p-2">Siniestro:</td>
+            <td class="border p-2"><input type="text" class="border border-gray-400 p-1" value="SISI_NU_SINIESTR"></td>
+            <td class="border p-2">Asegurado:</td>
+            <td class="border p-2"><input type="text" class="border border-gray-400 p-1" value="DSP_CACN_NM_APELLIDO_RA"></td>
+            <td class="border p-2">Estatus:</td>
+            <td class="border p-2"><input type="text" class="border border-gray-400 p-1" value="SISI_DST_SINIESTR"></td>
+        </tr>
+        <tr>
+            <td class="border p-2">Canal:</td>
+            <td class="border p-2"><input type="text" class="border border-gray-400 p-1" value="SICE_CA"></td>
+            <td class="border p-2">Ramo:</td>
+            <td class="border p-2"><input type="text" class="border border-gray-400 p-1" value="SICE_CACE_CAPO"></td>
+            <td class="border p-2">Póliza:</td>
+            <td class="border p-2"><input type="text" class="border border-gray-400 p-1" value="SICE_CACE_NU_CE"></td>
+            <td class="border p-2">Certificado:</td>
+            <td class="border p-2"><input type="text" class="border border-gray-400 p-1" value="SICE_CACE_NU_CE"></td>
+            <td class="border p-2">Fe. Ocurrencia:</td>
+            <td class="border p-2"><input type="text" class="border border-gray-400 p-1" value="SISI_FE_OCURREN"></td>
+        </tr>
+    </table>
+</div>
+
+<div class="overflow-x-auto">
+    <table class="w-full border-collapse mb-4">
+        <thead>
+            <tr>
+                <th class="border p-2 bg-gray-300">Ramo Contable</th>
+                <th class="border p-2 bg-gray-300">Cobertura</th>
+                <th class="border p-2 bg-gray-300">Suma Aseg.</th>
+                <th class="border p-2 bg-gray-300">Pri. Rva Inicial</th>
+                <th class="border p-2 bg-gray-300">Ajustes(+)</th>
+                <th class="border p-2 bg-gray-300">Pagos</th>
+                <th class="border p-2 bg-gray-300">Saldo</th>
+                <th class="border p-2 bg-gray-300">Ajuste Rva</th>
+                <th class="border p-2 bg-gray-300">Nvo. Mto Ajte.</th>
+                <th class="border p-2 bg-gray-300">Nvo. Saldo</th>
+                <th class="border p-2 bg-gray-300">Mensaje</th>
+                <th class="border p-2 bg-gray-300">Valida Ajustes</th>
+                <th class="border p-2 bg-gray-300">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let record of records; let i = index">
+                <td class="border p-2"><input type="text" [(ngModel)]="record.ramoContable" class="border border-gray-400 p-1"></td>
+                <td class="border p-2"><input type="text" [(ngModel)]="record.cobertura" class="border border-gray-400 p-1"></td>
+                <td class="border p-2"><input type="text" [(ngModel)]="record.sumaAseg" class="border border-gray-400 p-1"></td>
+                <td class="border p-2"><input type="text" [(ngModel)]="record.priRvaInicial" class="border border-gray-400 p-1"></td>
+                <td class="border p-2"><input type="text" [(ngModel)]="record.ajustes" class="border border-gray-400 p-1"></td>
+                <td class="border p-2"><input type="text" [(ngModel)]="record.pagos" class="border border-gray-400 p-1"></td>
+                <td class="border p-2"><input type="text" [(ngModel)]="record.saldo" class="border border-gray-400 p-1"></td>
+                <td class="border p-2 highlight-yellow"><input type="text" [(ngModel)]="record.ajusteRva" class="border border-gray-400 p-1"></td>
+                <td class="border p-2"><input type="text" [(ngModel)]="record.nvoMtoAjte" class="border border-gray-400 p-1"></td>
+                <td class="border p-2"><input type="text" [(ngModel)]="record.nvoSaldo" class="border border-gray-400 p-1"></td>
+                <td class="border p-2"><input type="text" [(ngModel)]="record.mensaje" class="border border-gray-400 p-1"></td>
+                <td class="border p-2"><input type="text" [(ngModel)]="record.validaAjustes" class="border border-gray-400 p-1"></td>
+                <td class="border p-2">
+                    <button class="bg-red-500 text-white px-2 py-1" (click)="deleteRecord(i)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="flex justify-end mt-4">
+    <button class="bg-gray-400 text-black px-4 py-2" (click)="addNewRecord()">Agregar Nuevo Registro</button>
+</div>
