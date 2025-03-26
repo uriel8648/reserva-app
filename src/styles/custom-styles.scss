@@ -1,5 +1,6 @@
 :root {
     --san-red: #EC0000;
+    --san-gray-strong: #5b5a5b;
 }
 
 
@@ -70,4 +71,33 @@
         background-color: #FFFFFF;
         color: var(--san-red);
     }
+}
+
+.san-container-table{
+    background-color: #f0f0f0;
+    color: var(--san-gray-strong);
+}
+
+.san-container-table input[ type="text"] {
+    border: none;
+}
+.san-font-bold{
+    font-weight: bold;
+}
+.san-head-table{
+    background-color: var(--san-gray-strong);
+}
+.border{
+    border-block-start: none;
+    border-bottom: none;
+    border-left-color: var(--color-gray-400);
+    border-right-color: var(--color-gray-400);
+}
+.san-border-white{
+    border-color: #FFFFFF;
+    border-width: 1px;
+}
+.input-add{
+    border: solid 1px var(--san-red);
+    border-radius: 5px;
 }
