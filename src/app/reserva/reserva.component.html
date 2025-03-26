@@ -1,5 +1,5 @@
-
-<div class="bg-teal-700 text-white p-4 flex justify-between items-center">
+<!DOCTYPE html>
+<header class="san-background text-white p-4 flex justify-between items-center">
     <div>
         <div class="text-xl font-bold">SISTEMA DE ACTUALIZACION RESERVAS</div>
         <div class="text-sm">Usuario: CGC$USER</div>
@@ -22,11 +22,11 @@
     <div class="text-sm">
         Conectado a: DI_CONEXION
     </div>
-</div>
+</header>
 
 
 
-<div class="bg-gray-300 p-2 mt-4 font-bold">Modificación Reserva de Coberturas</div>
+<div class="san-background p-2 mt-4 font-bold">Modificación Reserva de Coberturas</div>
 <div class="overflow-x-auto">
     <table class="w-full border-collapse mb-4">
         <tr>
@@ -90,7 +90,7 @@
                 <td class="border p-2"><input type="text" [(ngModel)]="record.mensaje" class="border border-gray-400 p-1"></td>
                 <td class="border p-2"><input type="text" [(ngModel)]="record.validaAjustes" class="border border-gray-400 p-1"></td>
                 <td class="border p-2">
-                    <button class="bg-red-500 text-white px-2 py-1" (click)="deleteRecord(i)">Eliminar</button>
+                    <button class="san-btn-prim text-white px-2 py-1" (click)="deleteRecord(i)">Eliminar</button>
                 </td>
             </tr>
         </tbody>
@@ -98,5 +98,5 @@
 </div>
 
 <div class="flex justify-end mt-4">
-    <button class="bg-gray-400 text-black px-4 py-2" (click)="addNewRecord()">Agregar Nuevo Registro</button>
+    <button class="san-btn-prim text-black px-4 py-2" (click)="addNewRecord()">Agregar Nuevo Registro</button>
 </div>
