@@ -1,5 +1,5 @@
 :root {
-    --san-red: #ec0000;
+    --san-red: #EC0000;
 }
 
 
@@ -16,9 +16,58 @@
     border: 1px solid var(--san-red);
     border-radius: 48px;
     padding: 6px 18px;
+    transition: 0.3s ease all;
+    -webkit-transition: 0.3s ease all;
+    -moz-transition: 0.3s ease all;
+    -o-transition: 0.3s ease all;
+    cursor: pointer;
+
+    &:hover, &:active {
+        background-color: #FFFFFF;
+        color: var(--san-red);
+    }
+}
+
+.san-btn-sec {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: var(--san-red);
+    background-color: #FFFFFF;
+    border: 1px solid var(--san-red);
+    border-radius: 48px;
+    padding: 6px 18px;
     width: 154px;
     transition: 0.3s ease all;
     -webkit-transition: 0.3s ease all;
     -moz-transition: 0.3s ease all;
     -o-transition: 0.3s ease all;
+    cursor: pointer;
+
+    &:hover, &:active {
+        background-color: var(--san-red);
+        color: #fff;
+    }
+}
+
+.san-btn-ter {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    background-color: #868686;
+    border: 1px solid #868686;
+    border-radius: 48px;
+    padding: 6px 18px;
+    width: 154px;
+    transition: 0.3s ease all;
+    -webkit-transition: 0.3s ease all;
+    -moz-transition: 0.3s ease all;
+    -o-transition: 0.3s ease all;
+    cursor: pointer;
+
+    &:hover, &:active {
+        background-color: #FFFFFF;
+        color: var(--san-red);
+    }
 }
